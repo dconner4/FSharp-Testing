@@ -1,7 +1,11 @@
 open System
 
-[<EntryPoint>]
-let main (argv :string[]) =
-    printfn "Hello World"
-    Console.ReadLine() |> ignore
-    0
+let hello() = 
+    printf "Print your name: "
+
+    let name = Console.ReadLine()
+
+    printfn "Hello %s" name
+
+hello()
+Console.ReadKey() |> ignore
